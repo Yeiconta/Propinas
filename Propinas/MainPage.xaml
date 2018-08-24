@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Propinas"
+             x:Class="Propinas.MainPage">
+
+    <StackLayout>
+        <TableView Intent="Form">
+            <TableSection>
+                <ViewCell >
+                    <Label Text="DATOS GENERALES" TextColor="Blue"></Label>
+                </ViewCell>
+                <EntryCell 
+                    Label="Total"
+                    Placeholder="Ingrese el total"
+                    x:Name="entTotal">                    
+                </EntryCell>
+                <EntryCell
+                    Label="Propina"
+                    Placeholder="Ingrese la propina"
+                    x:Name="entPropina">                    
+                </EntryCell>
+                <EntryCell
+                    Label="Personas"
+                    Placeholder="Ingrese el numero de personas"
+                    x:Name="entNumPer">                    
+                </EntryCell>
+            </TableSection>
+            <TableSection Title="CALCULAR" >
+                <ViewCell>
+                    <Button Text="CALCULAR"
+                            x:Name="btnCalcular">                        
+                    </Button>
+                </ViewCell>                
+            </TableSection>
+            <TableSection Title="RESULTADO" >
+                <TextCell Text="Propina"
+                          x:Name="txtPropina" TextColor="Black">                    
+                </TextCell>
+                <TextCell Text="Total" 
+                          x:Name="txtTotal">
+                </TextCell>
+                <TextCell Text="Propina por persona"
+                          x:Name="txtPropinaPer">
+                </TextCell>
+                <TextCell Text="Total por persona"
+                          x:Name="txtTotalPer">
+                </TextCell>
+            </TableSection>
+        </TableView>
+    </StackLayout>
+
+</ContentPage>
